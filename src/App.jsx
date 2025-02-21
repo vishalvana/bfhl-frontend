@@ -17,7 +17,7 @@ function App() {
     setError('');
     try {
       const payload = JSON.parse(jsonInput);
-      const response = await axios.post('http://localhost:3000/bfhl', payload);
+      const response = await axios.post('https://bfhl-backend-g31a.onrender.com/bfhl', payload);
       setResponseData(response.data);
     } catch (err) {
       setError('Invalid JSON input or error in backend call.');
